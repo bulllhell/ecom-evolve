@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
+import evoLogo from '../../assets/evoL.png'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiMenuAlt3, HiX } from 'react-icons/hi'
-import { TbShoppingBag } from 'react-icons/tb'
 
 const LINKS = [
   { label: 'Services',    to: '/services' },
@@ -53,21 +53,19 @@ export default function Navbar() {
         }}>
 
           {/* Logo */}
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
-            <div style={{
-              width: 34, height: 34, borderRadius: 10,
-              background: 'var(--brand-grad)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              boxShadow: '0 4px 14px rgba(108,71,255,0.35)',
-            }}>
-              <TbShoppingBag size={17} color="#fff" />
-            </div>
-            <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '1.1rem', color: 'var(--snow)' }}>
-              Ecom<span style={{ color: 'var(--violet)' }}>Evolve</span>
-            </span>
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+            <img
+              src={evoLogo}
+              alt="EcomEvolve"
+              style={{
+                height: 40,
+                width: 'auto',
+                objectFit: 'contain',
+              }}
+            />
           </Link>
 
-          {/* Desktop links — hidden on mobile via inline style, not Tailwind */}
+          {/* Desktop links */}
           <ul style={{
             display: isMobile ? 'none' : 'flex',
             alignItems: 'center', gap: 36, listStyle: 'none', margin: 0, padding: 0,
@@ -119,7 +117,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile hamburger — hidden on desktop */}
+          {/* Mobile hamburger */}
           <button
             onClick={() => setOpen(p => !p)}
             style={{

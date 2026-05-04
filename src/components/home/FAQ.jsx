@@ -10,7 +10,7 @@ const FAQS = [
   },
   {
     q: 'Do I need any technical knowledge or experience?',
-    a: 'Zero. We handle everything from domain setup to product listings, theme customisation, payment gateways, and shipping. You just need to show up for the onboarding call and give us your vision — we do the rest.',
+    a: 'Zero. We handle everything from domain setup to product listings, theme customisation, payment gateways, and shipping. You just need to show up for the onboarding call and give us your vision we do the rest.',
   },
   {
     q: 'How do your packages work and what\'s included?',
@@ -18,7 +18,7 @@ const FAQS = [
   },
   {
     q: 'Can you help with marketing and running paid ads?',
-    a: 'Yes — our Growth and Scale packages include Meta (Facebook/Instagram) and TikTok ad setup with creative strategy. We build campaigns designed for profitable ROAS from day one, not just traffic numbers.',
+    a: 'Yes our Growth and Scale packages include Meta (Facebook/Instagram) and TikTok ad setup with creative strategy. We build campaigns designed for profitable ROAS from day one, not just traffic numbers.',
   },
   {
     q: 'Do you work with entrepreneurs outside the US?',
@@ -174,7 +174,7 @@ export default function FAQ() {
               Still have questions?
             </p>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 13, color: 'var(--snow-muted)' }}>
-              Book a free call — we'll answer everything live.
+              Book a free call we'll answer everything live.
             </p>
           </div>
           <Link

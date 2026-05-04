@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import { FaInstagram, FaTiktok, FaYoutube, FaLinkedinIn } from 'react-icons/fa'
-import { TbArrowRight, TbShoppingBag } from 'react-icons/tb'
-import { motion } from 'framer-motion'
+import { FaInstagram, FaTiktok, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa'
+import { TbArrowRight } from 'react-icons/tb'
+import evoLogo from '../../assets/evoL.png'
 
 const COLS = {
   Company: [
@@ -19,10 +19,10 @@ const COLS = {
 }
 
 const SOCIALS = [
-  { icon: FaInstagram,  href: '#', label: 'Instagram' },
-  { icon: FaTiktok,     href: '#', label: 'TikTok' },
-  { icon: FaYoutube,    href: '#', label: 'YouTube' },
-  { icon: FaLinkedinIn, href: '#', label: 'LinkedIn' },
+  { icon: FaInstagram,  href: 'https://www.instagram.com/ecom_evolve?igsh=a2pqenJpMHY1Z2Vx&utm_source=qr', label: 'Instagram' },
+  { icon: FaTiktok,     href: 'https://www.tiktok.com/@akandeayomide05?_r=1&_t=ZT-965N9mLLRLZ',            label: 'TikTok' },
+  { icon: FaLinkedinIn, href: 'https://www.linkedin.com/in/ecom-evolve-10aa3a377',                          label: 'LinkedIn' },
+  { icon: FaWhatsapp,   href: 'https://wa.me/23408154084093',                                               label: 'WhatsApp' },
 ]
 
 export default function Footer() {
@@ -35,7 +35,6 @@ export default function Footer() {
         borderBottom: '1px solid rgba(255,255,255,0.08)',
         position: 'relative', overflow: 'hidden',
       }}>
-        {/* Subtle dot grid on gradient */}
         <div style={{
           position: 'absolute', inset: 0, pointerEvents: 'none',
           backgroundImage: 'radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px)',
@@ -94,25 +93,20 @@ export default function Footer() {
         <div style={{ gridColumn: 'span 2' }}>
           <Link to="/" style={{
             display: 'inline-flex', alignItems: 'center', gap: 10, marginBottom: 18,
+            textDecoration: 'none',
           }}>
-            <div style={{
-              width: 34, height: 34, borderRadius: 10,
-              background: 'var(--brand-grad)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              boxShadow: '0 4px 16px rgba(108,71,255,0.40)',
-            }}>
-              <TbShoppingBag size={17} color="#fff" />
-            </div>
-            <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '1.1rem', color: 'var(--snow)' }}>
-              Ecom<span style={{ color: 'var(--violet-bright)' }}>Evolve</span>
-            </span>
+            <img
+              src={evoLogo}
+              alt="EcomEvolve"
+              style={{ height: 38, width: 'auto', objectFit: 'contain' }}
+            />
           </Link>
 
           <p style={{
             fontFamily: 'var(--font-body)', fontSize: 13,
             color: 'var(--snow-muted)', lineHeight: 1.75, maxWidth: 260, marginBottom: 24,
           }}>
-            We help entrepreneurs build, optimize, and scale profitable Shopify stores 
+            We help entrepreneurs build, optimize, and scale profitable Shopify stores
             from day one to $100k months.
           </p>
 
@@ -130,16 +124,16 @@ export default function Footer() {
                   transition: 'all 0.2s',
                 }}
                 onMouseEnter={e => {
-                  e.currentTarget.style.background   = 'var(--violet-muted)'
-                  e.currentTarget.style.borderColor  = 'var(--violet-border)'
-                  e.currentTarget.style.color        = 'var(--violet-bright)'
-                  e.currentTarget.style.transform    = 'scale(1.08)'
+                  e.currentTarget.style.background  = 'var(--violet-muted)'
+                  e.currentTarget.style.borderColor = 'var(--violet-border)'
+                  e.currentTarget.style.color       = 'var(--violet-bright)'
+                  e.currentTarget.style.transform   = 'scale(1.08)'
                 }}
                 onMouseLeave={e => {
-                  e.currentTarget.style.background   = 'transparent'
-                  e.currentTarget.style.borderColor  = 'var(--bg-border)'
-                  e.currentTarget.style.color        = 'var(--snow-muted)'
-                  e.currentTarget.style.transform    = 'scale(1)'
+                  e.currentTarget.style.background  = 'transparent'
+                  e.currentTarget.style.borderColor = 'var(--bg-border)'
+                  e.currentTarget.style.color       = 'var(--snow-muted)'
+                  e.currentTarget.style.transform   = 'scale(1)'
                 }}
               >
                 <Icon size={14} />
