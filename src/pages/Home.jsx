@@ -1,11 +1,12 @@
 import Hero     from '../components/home/Hero'
 import TrustBar from '../components/home/TrustBar'
+import Packages   from '../components/home/Packages'
 import FAQ      from '../components/home/FAQ'
 import VideoReviews from '../components/home/VideoReviews'
 
 // Coming next:
 // import Services   from '../components/home/Services'
-// import Packages   from '../components/home/Packages'
+
 // import VideoReviews from '../components/home/VideoReviews'
 // import Portfolio  from '../components/home/Portfolio'
 // import BookingCTA from '../components/home/BookingCTA'
@@ -15,8 +16,9 @@ export default function Home() {
     <>
       <Hero />
       <TrustBar />
+      <Packages />
       {/* <Services /> */}
-      {/* <Packages /> */}
+     
       <VideoReviews />
       {/* <Portfolio /> */}
       <FAQ />
