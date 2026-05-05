@@ -5,7 +5,7 @@ import {
   TbCheck, TbX, TbArrowUpRight, TbLock, TbShieldCheck,
   TbClock, TbCalendar, TbStar, TbX as TbClose,
 } from 'react-icons/tb'
-import { packages } from '../../data/packages'
+import { packages } from '../../data/package'
 
 import { API_URL } from '../../lib/api'
 
