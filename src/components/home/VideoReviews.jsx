@@ -62,7 +62,7 @@ const reels = [
   },
 ]
 
-const IG_PROFILE = 'https://www.instagram.com/ecomevolve'
+const IG_PROFILE = 'https://www.instagram.com/ecom_evolve?igsh=ZHFmb3l4aTRoem5k'
 
 // ── Modal ─────────────────────────────────────────────────────
 function ReelModal({ reel, onClose }) {

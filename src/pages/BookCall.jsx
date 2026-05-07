@@ -225,7 +225,7 @@ export default function BookCall() {
         >
           {[
             { icon: TbPhone, label: 'Prefer to call?', value: 'WhatsApp us', href: '#' },
-            { icon: TbMail,  label: 'Prefer email?',   value: 'hello@ecomevolve.com', href: 'mailto:hello@ecomevolve.com' },
+            { icon: TbMail,  label: 'Prefer email?',   value: 'ecomevolve12@gmail.com', href: 'mailto:hello@ecomevolve.com' },
           ].map(({ icon: Icon, label, value, href }) => (
             <a
               key={label} href={href}
