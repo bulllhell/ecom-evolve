@@ -9,8 +9,8 @@ import {
   animate,
 } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { RiArrowRightUpLine, RiDoubleQuotesL, RiSparkling2Fill } from 'react-icons/ri'
-import { SiInstagram, SiTiktok, SiX, SiYoutube } from 'react-icons/si'
+import { RiArrowRightUpLine, RiDoubleQuotesL, RiSparkling2Fill, RiMailFill } from 'react-icons/ri'
+import { SiTiktok, SiLinkedin, SiWhatsapp } from 'react-icons/si'
 
 /* Ecom Evolve | Founder section. Uses the project violet design tokens. */
 const BG         = '#0E0F1A'
@@ -34,12 +34,11 @@ const stats = [
   { to: 6,   suffix: '+',  label: 'Years In The Game' },
 ]
 
-// TODO: drop in Akande's real profile links
 const socials = [
-  { icon: SiInstagram, href: '#', label: 'Instagram' },
-  { icon: SiTiktok,    href: '#', label: 'TikTok'    },
-  { icon: SiX,         href: '#', label: 'X'         },
-  { icon: SiYoutube,   href: '#', label: 'YouTube'   },
+  { icon: SiTiktok,   href: 'https://www.tiktok.com/@akandeayomide05?_r=1&_t=ZT-965N9mLLRLZ', label: 'TikTok'   },
+  { icon: SiLinkedin, href: 'https://www.linkedin.com/in/ecom-evolve-10aa3a377?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app', label: 'LinkedIn' },
+  { icon: SiWhatsapp, href: 'https://wa.me/2348154084093', label: 'WhatsApp' },
+  { icon: RiMailFill, href: 'mailto:Ecomevolve12@gmail.com', label: 'Email'    },
 ]
 
 /* Animated count up metric */
@@ -182,8 +181,9 @@ export default function CEO() {
                 </p>
                 <div className="flex flex-wrap items-center gap-2">
                   {socials.map(({ icon: Icon, href, label }) => (
-                    <a key={label} href={href} target="_blank" rel="noopener noreferrer"
-                       aria-label={label}
+                    <a key={label} href={href}
+                       target={href.startsWith('http') ? '_blank' : undefined}
+                       rel="noopener noreferrer" aria-label={label}
                        className="flex h-8 w-8 items-center justify-center rounded-lg transition-colors duration-200"
                        style={{ background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(6px)' }}
                        onMouseEnter={e => (e.currentTarget.style.background = `${VIOLET}cc`)}
