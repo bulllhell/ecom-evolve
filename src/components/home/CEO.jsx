@@ -9,8 +9,8 @@ import {
   animate,
 } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { RiArrowRightUpLine, RiDoubleQuotesL, RiSparkling2Fill, RiMailFill } from 'react-icons/ri'
-import { SiTiktok, SiLinkedin, SiWhatsapp } from 'react-icons/si'
+import { RiArrowRightUpLine, RiDoubleQuotesL, RiSparkling2Fill, RiMailFill, RiLinkedinBoxLine } from 'react-icons/ri'
+import { SiTiktok, SiWhatsapp } from 'react-icons/si'
 
 /* Ecom Evolve | Founder section. Uses the project violet design tokens. */
 const BG         = '#0E0F1A'
@@ -36,7 +36,7 @@ const stats = [
 
 const socials = [
   { icon: SiTiktok,   href: 'https://www.tiktok.com/@akandeayomide05?_r=1&_t=ZT-965N9mLLRLZ', label: 'TikTok'   },
-  { icon: SiLinkedin, href: 'https://www.linkedin.com/in/ecom-evolve-10aa3a377?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app', label: 'LinkedIn' },
+  { icon: RiLinkedinBoxLine, href: 'https://www.linkedin.com/in/ecom-evolve-10aa3a377?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app', label: 'LinkedIn' },
   { icon: SiWhatsapp, href: 'https://wa.me/2348154084093', label: 'WhatsApp' },
   { icon: RiMailFill, href: 'mailto:Ecomevolve12@gmail.com', label: 'Email'    },
 ]
