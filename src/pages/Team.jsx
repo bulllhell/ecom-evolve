@@ -4,14 +4,16 @@ import { Link } from 'react-router-dom'
 import {
   RiArrowRightUpLine,
   RiSparkling2Fill,
-  RiInstagramLine,
+  RiLinkedinBoxLine,
+  RiBroadcastLine,
   RiMailLine,
+  RiMailFill,
   RiSearchEyeLine,
   RiBarChartBoxLine,
   RiCalendarCheckLine,
   RiCustomerService2Line,
 } from 'react-icons/ri'
-import { SiInstagram, SiTiktok, SiX, SiYoutube } from 'react-icons/si'
+import { SiTiktok, SiWhatsapp } from 'react-icons/si'
 
 /* Ecom Evolve | Team page. Violet design tokens. */
 const BG         = '#0E0F1A'
@@ -37,24 +39,23 @@ const founder = {
     { val: '$4M+', label: 'Revenue Driven'    },
     { val: '6+',   label: 'Years In The Game' },
   ],
-  // TODO: drop in Akande's real profile links
   socials: [
-    { icon: SiInstagram, href: '#', label: 'Instagram' },
-    { icon: SiTiktok,    href: '#', label: 'TikTok'    },
-    { icon: SiX,         href: '#', label: 'X'         },
-    { icon: SiYoutube,   href: '#', label: 'YouTube'   },
+    { icon: SiTiktok,   href: 'https://www.tiktok.com/@akandeayomide05?_r=1&_t=ZT-965N9mLLRLZ', label: 'TikTok'   },
+    { icon: RiLinkedinBoxLine, href: 'https://www.linkedin.com/in/ecom-evolve-10aa3a377?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app', label: 'LinkedIn' },
+    { icon: SiWhatsapp, href: 'https://wa.me/2348154084093', label: 'WhatsApp' },
+    { icon: RiMailFill, href: 'mailto:Ecomevolve12@gmail.com', label: 'Email'    },
   ],
 }
 
 /* The roles the studio is staffing next. As real people join, move them
    into a `team` array with name + image and render them as photo cards. */
 const openRoles = [
-  { icon: RiInstagramLine,       title: 'Social Media Manager', blurb: 'Builds presence across Instagram, TikTok, and Facebook with content that grows audiences and drives steady traffic.' },
-  { icon: RiMailLine,            title: 'Email Marketer',       blurb: 'Designs flows that recover carts, retain customers, and drive repeat revenue through Klaviyo and Mailchimp.' },
-  { icon: RiSearchEyeLine,       title: 'Product Researcher',   blurb: 'Finds high margin products using trend analysis, competitor research, and demand validation.' },
-  { icon: RiBarChartBoxLine,     title: 'Conversion Optimizer', blurb: 'Tunes product pages, store UX, and checkout so existing traffic turns into more revenue.' },
-  { icon: RiCalendarCheckLine,   title: 'Project Manager',      blurb: 'Coordinates timelines and departments so every build ships on time and to spec.' },
-  { icon: RiCustomerService2Line,title: 'Client Support',       blurb: 'Keeps clients informed and projects moving, handling communication and day to day operations.' },
+  { icon: RiBroadcastLine,        title: 'Social Media Manager', blurb: 'Builds presence across TikTok and other channels with content that grows audiences and drives steady traffic.' },
+  { icon: RiMailLine,             title: 'Email Marketer',       blurb: 'Designs flows that recover carts, retain customers, and drive repeat revenue through Klaviyo and Mailchimp.' },
+  { icon: RiSearchEyeLine,        title: 'Product Researcher',   blurb: 'Finds high margin products using trend analysis, competitor research, and demand validation.' },
+  { icon: RiBarChartBoxLine,      title: 'Conversion Optimizer', blurb: 'Tunes product pages, store UX, and checkout so existing traffic turns into more revenue.' },
+  { icon: RiCalendarCheckLine,    title: 'Project Manager',      blurb: 'Coordinates timelines and departments so every build ships on time and to spec.' },
+  { icon: RiCustomerService2Line, title: 'Client Support',       blurb: 'Keeps clients informed and projects moving, handling communication and day to day operations.' },
 ]
 
 function RoleCard({ role, index, reduce }) {
@@ -173,7 +174,9 @@ export default function Team() {
 
             <div className="mt-6 flex items-center gap-2">
               {founder.socials.map(({ icon: Icon, href, label }) => (
-                <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
+                <a key={label} href={href}
+                  target={href.startsWith('http') ? '_blank' : undefined}
+                  rel="noopener noreferrer" aria-label={label}
                   className="flex h-9 w-9 items-center justify-center rounded-xl transition-colors duration-200"
                   style={{ background: 'rgba(255,255,255,0.06)', border: `1px solid ${BORDER_MID}` }}
                   onMouseEnter={e => (e.currentTarget.style.background = `${VIOLET}cc`)}
