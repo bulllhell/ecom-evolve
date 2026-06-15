@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/layout/Layout'
+import Team from './pages/Team'
 
 const Home      = lazy(() => import('./pages/Home'))
 const Services  = lazy(() => import('./pages/Services'))
@@ -38,6 +39,7 @@ export default function App() {
             <Route path="services"  element={<Services />} />
             <Route path="portfolio" element={<Portfolio />} />
             <Route path="book-a-call" element={<BookCall />} />
+            <Route path="team" element={<Team />} />
             <Route path="thank-you"   element={<ThankYou />} />
             <Route path="*"           element={<NotFound />} />
           </Route>

@@ -4,6 +4,7 @@ import Services   from '../components/home/Services'
 import Packages   from '../components/home/Packages'
 import FAQ      from '../components/home/FAQ'
 import VideoReviews from '../components/home/VideoReviews'
+import CEO from '../components/home/CEO'
 
 // Coming next:
 // import Services   from '../components/home/Services'
@@ -20,6 +21,7 @@ export default function Home() {
       <Services />
       <Packages />
       {/* <Services /> */}
+      <CEO />
      
       <VideoReviews />
       {/* <Portfolio /> */}
